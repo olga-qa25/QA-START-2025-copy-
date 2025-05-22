@@ -3,10 +3,10 @@ import java.util.Random;
 public class Session3 {
 
     public static void main(String[] args) {
-        int[] hotelRooms = new int[100];
+        int[] hotelRooms = new int[15];
         Random rand = new Random();
         for (int i = 0; i < hotelRooms.length; i++) {
-            hotelRooms[i] = rand.nextInt(100);
+            hotelRooms[i] = rand.nextInt(25);
         }
 
         //1. ми не знаємо скільки разів ми будем пробігати масивом
