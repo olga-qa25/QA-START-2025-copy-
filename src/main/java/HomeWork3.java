@@ -20,20 +20,19 @@ public class HomeWork3 {
 
             for (int i = 0; i < hotelRooms.length - 1; i++) {
 
-                int currentElement = hotelRooms[i];//0
-                int nextElement = hotelRooms[i + 1];//1
+                int currentElement = hotelRooms [i];//0
+                int nextElement = hotelRooms [i+1];//1
 
 
-                if (nextElement > currentElement) {
+                if (nextElement < currentElement){
                     elementsSwitched = true;
-                    hotelRooms[i + 1] = currentElement;
-                    hotelRooms[i] = nextElement;
+                    hotelRooms[i+1]=currentElement;
+                    hotelRooms[i]= nextElement;
                 }
 
 
                 System.out.println(hotelRooms[i]);
-                System.out.println(hotelRooms[i + 1]);
-            }
+                System.out.println(hotelRooms[i+1]);}
 
 
             if (!elementsSwitched) {
@@ -45,6 +44,3 @@ public class HomeWork3 {
         }
     }
 }
-
-
-
