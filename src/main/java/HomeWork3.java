@@ -24,7 +24,7 @@ public class HomeWork3 {
                 int nextElement = hotelRooms[i + 1];//1
 
 
-                if (nextElement > currentElement) {
+                if (nextElement < currentElement) {
                     elementsSwitched = true;
                     hotelRooms[i + 1] = currentElement;
                     hotelRooms[i] = nextElement;
