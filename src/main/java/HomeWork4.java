@@ -45,38 +45,39 @@ public class HomeWork4 {
 //        }
 //        String username = "user name is admin ;kasdlijhas ;odh sadli liauystd o87a sjd ygalisgd o867a6s dilug23p87r lsjhdgf p8o67aits dliyat s9dilut a9s7d6 boailysgd o86atys doliyaga sukd,yaki7 ,dtto2873 6tro92378t kuasy,jtd kauyst,d kauystd o9y7t d2loiy3t kuyats dfkusydf";
 //        String password = "PASSWORD IS PASSWORD";
-//        System.out.println(username.length());
-//        System.out.println(username.toUpperCase());
-//        System.out.println(password.toLowerCase());
+//        System.out.println(username.length()); возвращает количество букв
+//        System.out.println(username.toUpperCase()); выводит в верхнем регистре
+//        System.out.println(password.toLowerCase()); выводит в нижнем регистре
 //
-//        System.out.println(username.indexOf("name"));
-//        System.out.println(username.lastIndexOf("is"));
+//        System.out.println(username.indexOf("name")); где находится первая буква в строке
+//        System.out.println(username.lastIndexOf("is")); где вообще есть искомая буква
 //
 //        int count = 0;
 //
-//        for (int i = 0; i < username.toCharArray().length; i++) {
+//        for (int i = 0; i < username.toCharArray().length; i++) { //перебирает масств символов, из которых состоит строка
 //            if (username.charAt(i) == 'a'){
 //                System.out.println("a found at: " + i);
 //                count++;
 //            }
 //        }
-//
+//                                                   // .concat соединяет строки
 //        System.out.println("Total count is: " + count);
 //
-//        System.out.println(username.contains("e i"));
+//        System.out.println(username.contains("e i")); //отвечает на вопрос, содержит строка в себе другую строку?
 //        System.out.println(username.contains("923"));
 //        System.out.println(username.indexOf("a"));
 //        System.out.println(username.lastIndexOf("a"));
 //
-//        System.out.println(username.startsWith("@gmail.com"));
-//        System.out.println(username.endsWith("@gmail.com"));
+//        System.out.println(username.startsWith("@gmail.com")); смотришь, на что начинается строка
+//        System.out.println(username.endsWith("@gmail.com")); смотришь, на что заканчивается строка
 
 //        String a = "my string a";
 //        String b = "my string A";
 //        String c = "my string c";
 //
-//        System.out.println(a.equals(b));
-//        System.out.println(a.equalsIgnoreCase(b));
+         // equals - используют для сравнения всего, кроме чисел
+//        System.out.println(a.equals(b)); сравнение с учетом регистра
+//        System.out.println(a.equalsIgnoreCase(b)); сравнение без регистра
 //        System.out.println(a.equals(c));
 //        System.out.println(a.equalsIgnoreCase(c));
 
@@ -97,7 +98,8 @@ public class HomeWork4 {
 //        System.out.println(badString.substring(10));
 //        System.out.println(badString.substring(2, 10));
 //        System.out.println(badString.substring(badString.indexOf(" is"), badString.lastIndexOf("d") + 1));
-
-
+//        .replace замена одного слова на другое
+//        .trim убирает все пробелы в начале и в конце
+//        .substring вернет строки от начала до нужного символа или наоборот (выделить фрагмент по словам или любым знакам)
     }
 }
