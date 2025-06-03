@@ -28,11 +28,11 @@ public class HomeWorkSession6 {
 //        System.out.println(aliceCar.color);
 //        System.out.println(bobCar.color);
 
-        aliceCar.goTo();
-        bobCar.goTo();
-
-        aliceCar.refuel(25, "diesel");
-        bobCar.refuel(15, "gasoline");
+//        aliceCar.goTo();
+//        bobCar.goTo();
+//
+//        aliceCar.refuel(25, "diesel");
+//        bobCar.refuel(15, "gasoline");
 
 //        System.out.println(aliceCar.model);
 //        System.out.println(bobCar.model);
@@ -40,5 +40,8 @@ public class HomeWorkSession6 {
 //        String s1 = "some string";
 //        String s2 = "";
 //        String s3 = null;
+
+        aliceCar.parameter(25);
+        bobCar.parameter(500);
     }
 }

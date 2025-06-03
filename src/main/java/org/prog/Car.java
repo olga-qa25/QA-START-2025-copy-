@@ -13,7 +13,7 @@ public class Car {
     public void refuel(int amount, String fuelType) {
         System.out.println(color + " car is refueling " + amount + " liters of " + fuelType);
     }
-    public void parameter(int amount, String fuelType, int destination){
-        System.out.println(color + " car is refueling " + amount + " liters of " + fuelType + "destination is" + destination);
+    public void parameter(int km) {
+        System.out.println("For " + color + " car destination is " + km);
     };
 }
