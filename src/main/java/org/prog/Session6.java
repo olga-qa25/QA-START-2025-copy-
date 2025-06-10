@@ -21,9 +21,9 @@ public class Session6 {
         Car aliceCar = new Car();
         Car bobCar = new Car();
 
-        aliceCar.color = "blue";
+        aliceCar.color = "green";
         aliceCar.model = "3";
-        bobCar.color = "red";
+        bobCar.color = null;
 
 //        System.out.println(aliceCar.color);
 //        System.out.println(bobCar.color);
