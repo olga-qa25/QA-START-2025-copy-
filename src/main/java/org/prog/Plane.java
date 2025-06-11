@@ -5,6 +5,7 @@ public class Plane {
     public int max;
     public String id;
 
-
-
+    public void goTo() {
+        System.out.println("The plane " + id + " passengers on board is ready for takeoff ");
+    }
 }
