@@ -6,6 +6,6 @@ public class Plane {
     public String id;
 
     public void goTo() {
-        System.out.println("The plane " + id + " passengers on board is ready for takeoff ");
+        System.out.println("The plane " + id + " is ready for takeoff ");
     }
 }
