@@ -1,10 +1,6 @@
 package org.prog.session8;
 
-import java.time.LocalDateTime;
-
 public class Train {
-    public static String trainType;
-
     public int id;
     public String destination;
     public int hours;

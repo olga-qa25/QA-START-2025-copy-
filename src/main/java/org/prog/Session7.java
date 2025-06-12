@@ -10,6 +10,9 @@ import java.util.UUID;
 // - random passengers on board up to maxPassengers;
 // - random flight id as UUID
 // 3. print number of planes with half or less seats taken
+// 4. * - make at least 50 planes in array
+//    * - sort planes by percentage of seats takes
+
 public class Session7 {
 
     public static void main(String[] args) {
