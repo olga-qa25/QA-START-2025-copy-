@@ -8,7 +8,7 @@ public class AutomationSession1 {
         Actor supportActor = new Actor();
 
         leadActor.name = "Michael Brown";
-        leadActor.name = "Jane Brown";
+        supportActor.name = "Jane Brown";
 
         leadActor.say("Hello, my name is Michael Brown");
         supportActor.say("Hello, my name is Jane Brown");
