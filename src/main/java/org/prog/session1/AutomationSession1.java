@@ -1,4 +1,4 @@
-package org.prog;
+package org.prog.session1;
 
 //TODO: Add second car, make it blue, make red car got to Kyiv, blue car go to Odessa
 public class AutomationSession1 {

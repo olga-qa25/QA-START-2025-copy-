@@ -1,4 +1,4 @@
-package org.prog;
+package org.prog.session1;
 
 //TODO: Homework make goTo accept String as parameter and say "color car goes to destination"
 
