@@ -37,10 +37,11 @@ public class AutomationSession2 {
 //        System.out.println("Alice: " + aliceCar.color);
 //        System.out.println("My Wife's Car: " + myWifesCar.color);
 
-        carService.paintCar(myWifesCar, "black");
+        carService.paintCar(myWifesCar, "black", aliceCar);
 
         System.out.println("Alice: " + aliceCar.color);
         System.out.println("My Wife's Car: " + myWifesCar.color);
+
     }
 
     public static void smth(int i) {

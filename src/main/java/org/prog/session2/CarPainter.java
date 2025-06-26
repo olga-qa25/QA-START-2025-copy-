@@ -14,8 +14,13 @@ public class CarPainter {
     public void paintCar(Car2 car, String color) {
         if (color == null) {
             car.color = "red";
-        } else {
-            car.color = color;
-        }
+        } else car.color = color;
     }
-}
+        public void polishCar(Car2 car){
+            System.out.println("The car was polished " + car.color);
+        };
+
+
+
+    }
+
