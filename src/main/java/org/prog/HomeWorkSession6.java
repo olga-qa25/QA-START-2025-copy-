@@ -19,7 +19,5 @@ public class HomeWorkSession6 {
 
         plane.goTo();
         System.out.println();
-        plane.freeSeats();
-        System.out.println();
     }
 }
