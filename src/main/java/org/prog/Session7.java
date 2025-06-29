@@ -13,23 +13,23 @@ import java.util.UUID;
 public class Session7 {
 
     public static void main(String[] args) {
-//        Car.wheelShape = "round";
-//        Car.goToStatic();
-////
-//        Car aliceCar = new Car();
-//        aliceCar.color = "blue";
-//        aliceCar.model = "BMW";
-//
-//        String aliceCarDesc = aliceCar.carDescription();
-//        System.out.println(aliceCarDesc);
-//
-//        String s = "asd";
-
-        System.out.println(UUID.randomUUID().toString());
+        Plane7 plane = new Plane7();
         Random random = new Random();
-        random.nextInt(10);
-        for (int i = 0; i < 50; i++) {
-            System.out.println(random.nextInt(100, 200));
+        plane.current = random.nextInt(0,200);
+
+
+        Random random1 = new Random();
+        plane.max = random1.nextInt(100,200);
+
+        if (plane.current > plane.max) {
+            plane.current = plane.max;
         }
+
+        System.out.println("Current passegers are "+ plane.current + ".");
+        System.out.println("Max passegers are " + plane.max + ".");
+        plane.id();
+        plane.freeSeats();
+
+
     }
 }
