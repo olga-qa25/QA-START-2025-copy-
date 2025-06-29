@@ -14,22 +14,20 @@ public class Session7 {
 
     public static void main(String[] args) {
         Plane7 plane = new Plane7();
+
         Random random = new Random();
-        plane.current = random.nextInt(0,200);
-
-
+        plane.current = random.nextInt(0, 200);//текущие до 200
         Random random1 = new Random();
-        plane.max = random1.nextInt(100,200);
+        plane.max = random1.nextInt(100, 200);//макс до 200
 
-        if (plane.current > plane.max) {
+        if (plane.current > plane.max) {//ограничение текущее не больше макс
             plane.current = plane.max;
         }
 
-        System.out.println("Current passegers are "+ plane.current + ".");
+        System.out.println("Current passegers are " + plane.current + ".");
         System.out.println("Max passegers are " + plane.max + ".");
         plane.id();
-        plane.freeSeats();
-
-
+        plane.freeSeats();//свободные места
     }
 }
+
