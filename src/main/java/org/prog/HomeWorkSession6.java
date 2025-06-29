@@ -6,44 +6,20 @@ package org.prog;
 
 public class HomeWorkSession6 {
     public static void main(String[] args) {
-        Plane passengerCurrent = new Plane();
-        Plane passengerMax = new Plane();
-        Plane passengerId = new Plane();
-
-        passengerCurrent.current = 5;
-        passengerMax.max = 50;
-        passengerId.id = "AA-1001";
+        Plane plane = new Plane();
+        plane.current = 50;
+        plane.max = 250;
+        plane.id = "AA-1001";
 
 
+        System.out.println("Current passengers :" + plane.current);
+        System.out.println("Max Passengers" + " : " + plane.max);
+        System.out.println("ID is " + plane.id);
+        System.out.println();
 
-        System.out.println("Current passengers :" + passengerCurrent.current);
-        System.out.println("Max Passengers" + " : " + passengerMax.max);
-        System.out.println("ID is " + passengerId.id);
-
-        passengerId.goTo();
-        System.out.println(passengerId);
-
-//        Car aliceCar = new Car();
-//        Car bobCar = new Car();
-//
-//        aliceCar.color = "blue";
-//        aliceCar.model = "3";
-//        bobCar.color = "red";
-//
-//        System.out.println(aliceCar.color);
-//        System.out.println(bobCar.color);
-//
-//        aliceCar.goTo();
-//        bobCar.goTo();
-//
-//        aliceCar.refuel(25, "diesel");
-//        bobCar.refuel(15, "gasoline");
-//
-//       System.out.println(aliceCar.model);
-//        System.out.println(bobCar.model);
-//
-//        String s1 = "some string";
-//        String s2 = "";
-//        String s3 = null;
+        plane.goTo();
+        System.out.println();
+        plane.freeSeats();
+        System.out.println();
     }
 }
