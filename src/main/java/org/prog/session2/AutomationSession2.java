@@ -12,8 +12,16 @@ public class AutomationSession2 {
      * #################[]###################
      * ######################################
      * ################[car3]################
-     * ########[carService]##################
+     * ########[carService]##########10######
      *
+     *  int i = 10;    ???? i == j
+     *  int j = 10;
+     *  Car car1 = new Car();
+     *  car1.color = red;
+     *  Car car2 = new Car();
+     *  car2.color = red;
+     *  car1 == car2
+     *  car1.equals(car2)
      * @param args
      */
 
@@ -41,10 +49,13 @@ public class AutomationSession2 {
 
         System.out.println("Alice: " + aliceCar.color);
         System.out.println("My Wife's Car: " + myWifesCar.color);
+
+        int i = 10; // --> 10
+        smth(i);
     }
 
     public static void smth(int i) {
-        i += 1000;
+        i += 1000; // --> 1010
         System.out.println("i " + i);
     }
 }
