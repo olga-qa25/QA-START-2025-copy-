@@ -16,4 +16,10 @@ public class BMW implements ICar {
     public void brake() {
         System.out.println("BMW never brakes");
     }
+
+    @Override
+    public void driveTo(String destination, String from, String stoppingAt) {
+        System.out.println("BMW drives from " + from + " to " + destination);
+        System.out.println("BMW stops at " + stoppingAt);
+    }
 }

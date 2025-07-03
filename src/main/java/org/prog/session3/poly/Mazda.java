@@ -14,7 +14,28 @@ public class Mazda implements ICar {
         driveTo(destination, from, "nowhere");
     }
 
-    public void driveTo(String destination, String from, String stoppingAt) {
+    private int passengers = 0;
+    private boolean gasSplit = false;
+
+    public void setPassengers(int passengers) {
+        passengers = passengers;
+        if (passengers > 0) gasSplit = true;
+        else gasSplit = false;
+    }
+        @Override
+        public void driveTo(String destination, String from, String stoppingAt) {
+            System.out.println("Mazda drives from " + from + " to " + destination);
+            System.out.println("Mazda stopping at " + stoppingAt);
+
+            System.out.println("Amount of passengers: " + passengers);
+
+            if (gasSplit) {
+                System.out.println("The payment for gas is split among " + passengers + " passengers.");
+            } else {
+                System.out.println("The gas payment is not split.");
+            }
+
+
         System.out.println("Mazada drives from " + from + " to " + destination);
         System.out.println("Mazada stopping at " + stoppingAt);
     }
