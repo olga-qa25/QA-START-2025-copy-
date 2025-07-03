@@ -19,7 +19,21 @@ public class AutomationSession1 {
         leadActor.walkTo("edge of scene");
         supportActor.walkTo("edge of scene");
 
-        Car car = new Car();
-        car.color = "red";
+        System.out.println("======================");
+
+        Car carMichael = new Car();
+        carMichael.carName = "Michael's ";
+        carMichael.color = "red";
+        carMichael.destination = "Kyiv";
+
+        Car carJane = new Car();
+        carJane.carName = "Jane's ";
+        carJane.color = "blue";
+        carJane.destination = "Odessa";
+
+        carMichael.goTo();
+        carJane.goTo();
+
+
     }
 }
