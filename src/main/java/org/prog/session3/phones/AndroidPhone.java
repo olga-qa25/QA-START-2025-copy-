@@ -1,12 +1,5 @@
 package org.prog.session3.phones;
 
-public class AndroidPhone extends Phone implements ICamera {
+public class AndroidPhone extends Phone {
 
-    @Override
-    public void photo() {
-        System.out.println("Android took a photo");
-        System.out.println("Android took a photo");
-    }
 }
-
-
