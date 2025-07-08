@@ -45,7 +45,7 @@ public class AutomationSession2 {
 //        System.out.println("Alice: " + aliceCar.color);
 //        System.out.println("My Wife's Car: " + myWifesCar.color);
 
-        carService.paintCar(myWifesCar, "black", aliceCar);
+        carService.paintCar(myWifesCar, "black");
 
         System.out.println("Alice: " + aliceCar.color);
         System.out.println("My Wife's Car: " + myWifesCar.color);
