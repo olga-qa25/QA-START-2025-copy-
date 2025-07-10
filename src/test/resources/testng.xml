@@ -7,7 +7,7 @@
     </test>
     <test name="Make order and pay for it">
         <classes>
-            <class name="org.prog.session6.TestNG2"/>
+            <class name="org.prog.session7.WebTest"/>
         </classes>
     </test>
 </suite>
