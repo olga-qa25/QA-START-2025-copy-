@@ -6,7 +6,11 @@ public class Car {
 
     public String color;
 
-    public void goTo() {
-        System.out.println(color + " car is going somewhere");
+    public void goToK(String destination) {
+
+        System.out.println(color + " car is going to " + destination);
+    }
+    public void goToO (String destination) {
+        System.out.println(color + " car is going to " + destination);
     }
 }
