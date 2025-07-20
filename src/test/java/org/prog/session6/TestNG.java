@@ -1,6 +1,6 @@
 package org.prog.session6;
 
-import org.testng.annotations.BeforeSuite;
+import   org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
