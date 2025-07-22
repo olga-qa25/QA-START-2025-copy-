@@ -30,7 +30,7 @@ public class RestTests {
                 " should have at least 1 male");
 
         response.prettyPrint();
-//        ResultsDto dto = response.as(ResultsDto.class);
+        ResultsDto dto = response.as(ResultsDto.class);
 
 //        List<String> firstLastNames = dto.getResults().stream()
 //                .filter(p -> p.getGender().equals("male"))
