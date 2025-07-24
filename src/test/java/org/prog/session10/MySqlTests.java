@@ -2,6 +2,7 @@ package org.prog.session10;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.prog.session11.steps.RestSteps;
 import org.prog.session9.PersonDto;
 import org.prog.session9.ResultsDto;
 import org.testng.annotations.AfterSuite;

@@ -4,7 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 
 //TODO: add allo.ua page and move iphone search there
@@ -24,9 +25,13 @@ public class GooglePage {
     }
 
     public boolean isCookiesPresent() {
-        WebElement cookiesLink = driver.findElement(By.xpath(
+        List<WebElement> cookies = driver.findElements(By.xpath(
                 "//a[contains(@href, 'technologies/cookies')]"));
-        return cookiesLink.isDisplayed();
+        if (!cookies.isEmpty()) {
+            return cookies.get(0).isDisplayed();
+        } else {
+            return false;
+        }
     }
 
     public void acceptCookiesIfPresent() {
@@ -39,5 +44,15 @@ public class GooglePage {
         WebElement search = driver.findElement(By.name("q"));
         search.sendKeys("Ben Affleck");
         search.sendKeys(Keys.ENTER);
+    }
+
+    public void setSearchFieldValue(String value) {
+        WebElement search = driver.findElement(By.name("q"));
+        search.sendKeys(value);
+    }
+
+    public String getSearchFieldValue() {
+        WebElement search = driver.findElement(By.name("q"));
+        return search.getAttribute("value");
     }
 }
