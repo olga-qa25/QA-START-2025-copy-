@@ -13,13 +13,13 @@ public class RandomTestSteps {
 
     @Given("a random number {string} under {int}")
     public void generateRandomNumber(String alias, int maxValue) {
-        DataHolder.DATA.put(alias, Integer.valueOf(rand.nextInt(maxValue)));
+        DataHolder.DATA.put(alias, rand.nextInt(maxValue));
     }
 
     @Then("number {string} is bigger than {string}")
     public void compareNumbers(String bigNumber, String smallNumber) {
-        Integer big = Integer.valueOf((String) DataHolder.DATA.get(bigNumber));
-        Integer small = Integer.valueOf((String) DataHolder.DATA.get(smallNumber));
+        Integer big = (Integer) DataHolder.DATA.get(bigNumber);
+        Integer small = (Integer) DataHolder.DATA.get(smallNumber);
 
         Assert.assertTrue(big >= small,
                 "Number " + bigNumber + " is NOT greater than " + smallNumber);
