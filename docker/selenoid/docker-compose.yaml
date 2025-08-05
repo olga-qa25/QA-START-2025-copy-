@@ -1,5 +1,5 @@
 # BEFORE YOU START:
-#  docker pull selenoid/chrome:latest
+#  docker pull selenoid/vnc:chrome_121.0
 #  docker pull selenoid/video-recorder:latest-release
 
 #  docker network ls
@@ -8,31 +8,36 @@
 #  docker ps
 #  docker network connect selenoid [containers]
 #  docker-compose up
-version: '3'
 networks:
   selenoid:
-    external:
-      name: selenoid # This assumes network is already created
+    external: true
+
 services:
   selenoid:
     hostname: "selenoid"
-    networks:
-      selenoid: null
     image: aerokube/selenoid:latest-release
+    networks:
+      - selenoid
     volumes:
-      - "./:/etc/selenoid"
+      - "./browsers.json:/etc/selenoid/browsers.json:ro"
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./video:/opt/selenoid/video"
       - "./logs:/opt/selenoid/logs"
-    command: [ "-conf", "etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-log-output-dir", "/opt/selenoid/logs", "-container-network", "selenoid" ]
+    command: [
+      "-conf", "/etc/selenoid/browsers.json",
+      "-video-output-dir", "/opt/selenoid/video",
+      "-log-output-dir", "/opt/selenoid/logs",
+      "-container-network", "selenoid"
+    ]
     ports:
       - "4444:4444"
+
   selenoid-ui:
-    image: "aerokube/selenoid-ui"
-    hostname: "selenoid-ui"
+    image: aerokube/selenoid-ui
+    hostname: selenoid-ui
     networks:
-      selenoid: null
-    links:
+      - selenoid
+    depends_on:
       - selenoid
     ports:
       - "8081:8080"

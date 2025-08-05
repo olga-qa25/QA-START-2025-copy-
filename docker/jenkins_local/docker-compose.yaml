@@ -1,7 +1,12 @@
 # docker-compose.yaml
 version: '3.8'
+networks:
+  selenium_grid_default:
+    external: true
 services:
   jenkins:
+    networks:
+      - selenium_grid_default
     image: jenkins/jenkins:jdk17
     privileged: true
     user: root
