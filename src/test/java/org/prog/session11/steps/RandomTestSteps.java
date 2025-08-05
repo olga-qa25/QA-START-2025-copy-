@@ -22,6 +22,6 @@ public class RandomTestSteps {
         Integer small = (Integer) DataHolder.DATA.get(smallNumber);
 
         Assert.assertTrue(big >= small,
-                "Number " + bigNumber + " is NOT greater than " + smallNumber);
+                "Number " + big + " is NOT greater than " + small);
     }
 }
