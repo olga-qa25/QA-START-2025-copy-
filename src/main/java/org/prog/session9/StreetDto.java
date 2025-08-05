@@ -3,6 +3,6 @@ import lombok.Data;
 
 @Data
 public class StreetDto {
-    private int number;
+    private String number;
     private String name;
 }
