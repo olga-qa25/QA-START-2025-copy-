@@ -1,5 +1,6 @@
 package org.prog.session8.page;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +21,7 @@ public class GooglePage {
         this.driver = driver;
     }
 
+    @Step("Load Google Page")
     public void loadPage() {
         driver.get("https://www.google.com");
     }
@@ -34,12 +36,14 @@ public class GooglePage {
         }
     }
 
+    @Step("Accept Cookies on Google main page if Cookies are visible")
     public void acceptCookiesIfPresent() {
         if (isCookiesPresent()) {
             driver.findElements(By.tagName("button")).get(4).click();
         }
     }
 
+    @Step("Search for Ben Affleck")
     public void searchForSomething() {
         WebElement search = driver.findElement(By.name("q"));
         search.sendKeys("Ben Affleck");
