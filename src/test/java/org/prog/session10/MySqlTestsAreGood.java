@@ -15,7 +15,7 @@ import java.util.List;
 //TODO: Option 1 - write that data from API to DB
 //TODO: Option 1 - print City, Street and House number for each person in BD
 
-public class MySqlTests {
+public class MySqlTestsAreGood {
 
     private Connection connection;
 
@@ -55,7 +55,7 @@ public class MySqlTests {
 
     @Test
     public void testWriteToDBFromAPI() throws SQLException, ClassNotFoundException {
-        ResultsDto resultsDto = getUsers(3);
+        ResultsDto resultsDto = getUsers(10);
         List<PersonDto> personDtos = resultsDto.getResults();
         PreparedStatement preparedStatement = connection.prepareStatement(
                 "INSERT INTO Persons (Gender, Title, FirstName, LastName, Number, Street, City, Nat) VALUES (?,?,?,?,?,?,?,?)"
