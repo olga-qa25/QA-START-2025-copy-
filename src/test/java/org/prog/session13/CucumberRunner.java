@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 @CucumberOptions(
+//        tags = "@work-in-progress",
         features = "src/test/resources/features",
         glue = "org.prog.session11.steps",
         plugin = {
@@ -30,10 +31,10 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
     @BeforeSuite
     public void beforeSuite() throws ClassNotFoundException, SQLException, MalformedURLException {
         WebSteps.driver = new RemoteWebDriver(
-                new URL("http://selenium-hub:4444"), remoteChrome());
+                new URL("http://localhost:4444"), remoteChrome());
         Class.forName("com.mysql.cj.jdbc.Driver");
         DBSteps.connection = DriverManager.getConnection(
-                "jdbc:mysql://mysql-db-1:3306/db", "root", "password");
+                "jdbc:mysql://localhost:3306/db", "root", "password");
     }
 
     @AfterSuite
