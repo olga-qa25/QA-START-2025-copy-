@@ -2,7 +2,7 @@
 <suite name="Client side functionality" verbose="1">
     <test name="Make order and pay for it">
         <classes>
-            <class name="org.prog.session12.CucumberRunner"/>
+            <class name="org.prog.session13.CucumberRunner"/>
         </classes>
     </test>
 </suite>

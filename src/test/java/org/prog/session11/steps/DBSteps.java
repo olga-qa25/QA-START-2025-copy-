@@ -15,6 +15,7 @@ public class DBSteps {
 
     @Given("I store {string} in database")
     public void storePersonsToDB(String alias) throws SQLException {
+        System.out.println("===========================================================");
         ResultsDto resultsDto = (ResultsDto) DataHolder.DATA.get(alias);
         List<PersonDto> personDtos = resultsDto.getResults();
         PreparedStatement preparedStatement = connection.prepareStatement(
