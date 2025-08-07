@@ -17,8 +17,14 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 @CucumberOptions(
+//        tags = "@work-in-progress",
         features = "src/test/resources/features",
-        glue = "org.prog.session11.steps"
+        glue = "org.prog.session11.steps",
+        plugin = {
+                "pretty",
+                "json:target/cucumber-reports/Cucumber.json",
+                "html:target/cucumber-report.html"
+        }
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 
