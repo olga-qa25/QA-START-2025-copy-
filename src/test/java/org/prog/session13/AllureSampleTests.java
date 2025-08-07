@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.prog.session11.steps.WebSteps;
+import org.prog.session14.WebDriverFactory;
 import org.prog.session8.page.GooglePage;
 import org.prog.session8.page.W3SchoolsPage;
 import org.testng.Assert;
@@ -22,8 +23,7 @@ public class AllureSampleTests {
 
     @BeforeSuite
     public void initWebDriver() throws MalformedURLException {
-        driver = WebSteps.driver = new RemoteWebDriver(
-                new URL("http://selenium-hub:4444"), CucumberRunner.remoteChrome());
+        driver = WebSteps.driver = WebDriverFactory.getDriver();
         googlePage = new GooglePage(driver);
         w3SchoolsPage = new W3SchoolsPage(driver);
     }

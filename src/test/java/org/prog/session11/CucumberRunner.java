@@ -5,6 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.prog.session11.steps.DBSteps;
 import org.prog.session11.steps.WebSteps;
+import org.prog.session14.WebDriverFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -19,7 +20,7 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
     public void beforeSuite() throws ClassNotFoundException, SQLException {
-        WebSteps.driver = new ChromeDriver();
+        WebSteps.driver = WebDriverFactory.getDriver();
         Class.forName("com.mysql.cj.jdbc.Driver");
         DBSteps.connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/db", "root", "password");
