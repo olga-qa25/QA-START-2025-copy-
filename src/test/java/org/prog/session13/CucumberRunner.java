@@ -2,14 +2,18 @@ package org.prog.session13;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.prog.session11.steps.DBSteps;
 import org.prog.session11.steps.WebSteps;
-import org.prog.session14.DBConnectionFactory;
-import org.prog.session14.WebDriverFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.HashMap;
 
 @CucumberOptions(
 //        tags = "@work-in-progress",
@@ -25,9 +29,12 @@ import java.sql.SQLException;
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
-    public void beforeSuite() {
-        WebSteps.driver = WebDriverFactory.getDriver();
-        DBSteps.connection = DBConnectionFactory.getConnection();
+    public void beforeSuite() throws ClassNotFoundException, SQLException, MalformedURLException {
+        WebSteps.driver = new RemoteWebDriver(
+                new URL("http://localhost:4444"), remoteChrome());
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        DBSteps.connection = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/db", "root", "password");
     }
 
     @AfterSuite
@@ -40,5 +47,16 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
         }
     }
 
-
+    public static ChromeOptions remoteChrome() {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setAcceptInsecureCerts(true);
+        chromeOptions.addArguments("--remote-allow-origins=*");
+        chromeOptions.addArguments("--disable-notifications");
+        chromeOptions.addArguments("--start-maximized");
+        chromeOptions.setCapability("selenoid:options", new HashMap<String, Object>() {{
+            put("enableVideo", true);
+            put("enableVNC", true);
+        }});
+        return chromeOptions;
+    }
 }
