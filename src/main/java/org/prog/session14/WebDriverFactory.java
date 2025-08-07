@@ -16,6 +16,7 @@ public class WebDriverFactory {
     @SneakyThrows
     public static WebDriver getDriver() {
         String browser = System.getProperty("browser", "local_chrome");
+        System.out.println(">>>>>>" + browser);
         switch (browser) {
             case "local_chrome":
                 return new ChromeDriver();
