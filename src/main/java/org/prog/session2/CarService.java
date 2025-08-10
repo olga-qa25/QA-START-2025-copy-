@@ -14,14 +14,17 @@ public class CarService {
             coffeeBreak(sasha);
             vova.prepareCarForPainting(carToPaint);
 
+
             coffeeBreak(vova);
             sasha.paintCar(carToPaint, newCarColor);
+            sasha.polishCar(carToPaint);
         } else {
             coffeeBreak(vova);
             sasha.prepareCarForPainting(carToPaint);
 
             coffeeBreak(sasha);
             vova.paintCar(carToPaint, newCarColor);
+            vova.polishCar(carToPaint);
         }
     }
 

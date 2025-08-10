@@ -3,6 +3,8 @@ package org.prog.session2;
 //TODO: 1 add method to polish cars
 //TODO: 2. Polish method must print "polishing + color of car"
 
+import javax.swing.*;
+
 public class CarPainter {
 
     public int breakDuration;
@@ -17,5 +19,8 @@ public class CarPainter {
         } else {
             car.color = color;
         }
+    }
+    public void polishCar(Car2 car){
+        System.out.println(("Polishing " + car.color));
     }
 }
