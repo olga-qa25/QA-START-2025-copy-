@@ -1,5 +1,6 @@
 package org.prog.session1;
 
+
 public class Actor {
     public String name;
 
