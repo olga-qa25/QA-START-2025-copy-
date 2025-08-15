@@ -24,6 +24,7 @@ Feature: MySqlTestsToCucumber
 #
 #
 #  Scenario: Google and random people test
+
 #    Given request 3 random people from API as "crowd1"
 #    And I store "crowd1" in database
 #    And I pick a single random person from DB as "random_person"
