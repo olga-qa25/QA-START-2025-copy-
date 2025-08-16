@@ -19,12 +19,12 @@ import java.sql.SQLException;
 )
 public class HWCucumberRunner extends AbstractTestNGCucumberTests {
 
-    private Connection connection;
+    private static Connection connection;
     @BeforeSuite
     public void beforeSuite() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         HWDBStep.connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/db", "root", "password");
+                "jdbc:mysql://127.0.0.1:3306/mysql?useSSL=false&serverTimezone=UTC", "root", "password");
     }
 
     @AfterSuite

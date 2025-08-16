@@ -4,6 +4,9 @@ Feature: MySqlTestsToCucumber
     When write data from API to DB
     Then read this info from DB
 
+
+
+
 #Feature: training scenarios
 #
 ##  Background:
