@@ -24,7 +24,7 @@ public class HWCucumberRunner extends AbstractTestNGCucumberTests {
     public void beforeSuite() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         HWDBStep.connection = DriverManager.getConnection(
-                "jdbc:mysql://db:3306/db-1", "root", "password");
+                "jdbc:mysql://mysql-db:3306/db", "root", "password");
     }
 
     @AfterSuite
